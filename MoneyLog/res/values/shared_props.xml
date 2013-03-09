@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- shared preferences file key-->
+    <string name="shared_prop_key">money_log_shared_key</string>
+
+    <!-- keys -->
+    <string name="remember_me_key">remember_me_key</string>
+    <string name="login_key">login_me_key</string>
+    <string name="password_key">password_me_key</string>
+</resources>

@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <!-- application name-->
     <string name="app_name">MoneyLog</string>
+
+    <!-- main activity button names-->
+    <string name="budget_button_name">Budgets</string>
+    <string name="account_button_name">Accounts</string>
+    <string name="structure_button_name">Structure</string>
+    <string name="reminder_button_name">Reminder</string>
+    <string name="template_button_name">Templates</string>
+    <string name="report_button_name">Reports</string>
+
+    <!-- auth activity names-->
+    <string name="login_label_name">Login</string>
+    <string name="password_label_name">Password</string>
+    <string name="remember_label_name">Remember me</string>
+    <string name="enter_button_name">Enter</string>
+
+
 </resources>
