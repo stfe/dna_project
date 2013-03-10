@@ -5,6 +5,6 @@
 
     <!-- keys -->
     <string name="remember_me_key">remember_me_key</string>
-    <string name="login_key">login_me_key</string>
-    <string name="password_key">password_me_key</string>
+    <string name="login_key">login_key</string>
+    <string name="password_key">password_key</string>
 </resources>

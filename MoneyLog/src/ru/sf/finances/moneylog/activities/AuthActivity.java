@@ -1,17 +1,16 @@
-package com.example.moneylog;
+package ru.sf.finances.moneylog.activities;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
+import ru.sf.finances.moneylog.R;
 
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -24,6 +23,25 @@ public class AuthActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.auth);
 
+        //checkAuthAndRedirect();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
+        //checkAuthAndRedirect();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        checkAuthAndRedirect();
+    }
+
+    /**
+     * Check login and password and redirect to the MainActivity if auth is correct
+     */
+    private void checkAuthAndRedirect() {
         Map<String, String> loginAncPassword = getLoginAndPass();
         if (checkAuth(loginAncPassword.get(getString(R.string.login_key)), loginAncPassword.get(getString(R.string.password_key)))) {
             redirectToMainActivity();
@@ -56,6 +74,7 @@ public class AuthActivity extends Activity {
     private void redirectToMainActivity() {
         Intent intent = new Intent();
         intent.setClass(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
@@ -106,6 +125,7 @@ public class AuthActivity extends Activity {
         editor.putBoolean(getString(R.string.remember_me_key), isRememberMeChecked);
         editor.putString(getString(R.string.login_key), login);
         editor.putString(getString(R.string.password_key), password);
+        editor.commit();
     }
 
 
@@ -118,10 +138,10 @@ public class AuthActivity extends Activity {
         SharedPreferences sharedPref = this.getSharedPreferences(
                 getString(R.string.shared_prop_key), Context.MODE_PRIVATE);
         boolean isRemember = sharedPref.getBoolean(getString(R.string.remember_me_key), false);
-        Map<String, String> loginAndPass = Collections.singletonMap("","");
-        if(isRemember){
-            loginAndPass.put(getString(R.string.login_key), sharedPref.getString(getString(R.string.login_key),""));
-            loginAndPass.put(getString(R.string.password_key), sharedPref.getString(getString(R.string.password_key),""));
+        Map<String, String> loginAndPass = new HashMap<String, String>();
+        if (isRemember) {
+            loginAndPass.put(getString(R.string.login_key), sharedPref.getString(getString(R.string.login_key), ""));
+            loginAndPass.put(getString(R.string.password_key), sharedPref.getString(getString(R.string.password_key), ""));
         }
 
         return loginAndPass;
