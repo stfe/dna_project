@@ -9,10 +9,6 @@
             android:layout_height="32dp"
             android:id="@+id/informationImage" android:layout_gravity="center|right" android:longClickable="true"
             android:focusableInTouchMode="false"/>
-    <ImageButton
-            android:layout_width="71dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"/>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
@@ -36,7 +32,7 @@
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/budget_button_name"
                         android:id="@+id/btn_budgets" android:layout_gravity="right|center_vertical"
-                        android:layout_column="1"/>
+                        android:layout_column="1" android:singleLine="false" android:onClick="budgetButtonListener"/>
             </TableRow>
             <TableRow
                     android:layout_width="fill_parent"

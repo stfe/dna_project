@@ -18,5 +18,11 @@
 
 
         </activity>
+        <activity android:name=".activities.BudgetActivity"/>
+
+        <provider
+                android:name=".sqlproviders.BudgetContentProvider"
+                android:authorities="ru.sf.finances.moneylog.contentprovider" >
+        </provider>
     </application>
 </manifest> 

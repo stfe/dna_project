@@ -19,5 +19,11 @@
     <string name="remember_label_name">Remember me</string>
     <string name="enter_button_name">Enter</string>
 
+    <!-- budget activity names -->
+    <string name="add_budget_button_name">Add budget</string>
+
+    <!-- DB constants-->
+    <string name="db_name">moneylog.db</string>
+
 
 </resources>
