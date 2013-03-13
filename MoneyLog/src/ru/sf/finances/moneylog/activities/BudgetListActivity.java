@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import ru.sf.finances.moneylog.R;
@@ -16,7 +18,7 @@ import ru.sf.finances.moneylog.sqlproviders.BudgetTable;
 /**
  * Budget activity
  */
-public class BudgetActivity extends Activity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class BudgetListActivity extends Activity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     // private Cursor cursor;
     private SimpleCursorAdapter adapter;
@@ -30,7 +32,7 @@ public class BudgetActivity extends Activity implements LoaderManager.LoaderCall
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        String[] projection = { BudgetTable.COLUMN_ID, BudgetTable.COLUMN_NAME, BudgetTable.COLUMN_COMMENT };
+        String[] projection = {BudgetTable.COLUMN_ID, BudgetTable.COLUMN_NAME, BudgetTable.COLUMN_COMMENT};
         CursorLoader cursorLoader = new CursorLoader(this,
                 BudgetContentProvider.CONTENT_URI, projection, null, null, null);
         return cursorLoader;
@@ -63,5 +65,11 @@ public class BudgetActivity extends Activity implements LoaderManager.LoaderCall
 
         ListView listView = (ListView) findViewById(R.id.lst_budget);
         listView.setAdapter(adapter);
+    }
+
+    public void addBudgetButtonListener(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, AddBudgetActivity.class);
+        startActivity(intent);
     }
 }

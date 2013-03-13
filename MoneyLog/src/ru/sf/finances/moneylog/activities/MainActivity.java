@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
      */
     public void budgetButtonListener(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, BudgetActivity.class);
+        intent.setClass(this, BudgetListActivity.class);
         startActivity(intent);
     }
 }

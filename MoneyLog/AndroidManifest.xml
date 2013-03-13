@@ -18,7 +18,8 @@
 
 
         </activity>
-        <activity android:name=".activities.BudgetActivity"/>
+        <activity android:name=".activities.BudgetListActivity"/>
+        <activity android:name=".activities.AddBudgetActivity"/>
 
         <provider
                 android:name=".sqlproviders.BudgetContentProvider"

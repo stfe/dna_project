@@ -26,25 +26,27 @@
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/account_button_name"
                         android:id="@+id/btn_accounts" android:layout_gravity="left|center_vertical"
-                        android:layout_column="0"/>
+                        android:layout_column="0" android:layout_weight="1"/>
                 <Button
                         android:layout_width="@dimen/main_layout_button_width"
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/budget_button_name"
                         android:id="@+id/btn_budgets" android:layout_gravity="right|center_vertical"
-                        android:layout_column="1" android:singleLine="false" android:onClick="budgetButtonListener"/>
+                        android:layout_column="1" android:singleLine="false" android:onClick="budgetButtonListener"
+                        android:layout_weight="1"/>
             </TableRow>
             <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" android:gravity="center">
+                    android:layout_height="fill_parent" android:gravity="center" android:layout_weight="0">
                 <Button android:layout_width="@dimen/main_layout_button_width"
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/structure_button_name" android:id="@+id/btn_structure"
-                        android:layout_gravity="center" android:singleLine="false" android:layout_column="0"/>
+                        android:layout_gravity="center" android:singleLine="false" android:layout_column="0"
+                        android:layout_weight="1"/>
                 <Button android:layout_width="@dimen/main_layout_button_width"
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/reminder_button_name" android:id="@+id/btn_reminder"
-                        android:layout_gravity="center" android:layout_column="1"/>
+                        android:layout_gravity="center" android:layout_column="1" android:layout_weight="1"/>
             </TableRow>
             <TableRow
                     android:layout_width="fill_parent"
@@ -52,11 +54,12 @@
                 <Button android:layout_width="@dimen/main_layout_button_width"
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/template_button_name" android:id="@+id/btn_templates"
-                        android:layout_gravity="center" android:singleLine="false" android:layout_column="0"/>
+                        android:layout_gravity="center" android:singleLine="false" android:layout_column="0"
+                        android:layout_weight="1"/>
                 <Button android:layout_width="@dimen/main_layout_button_width"
                         android:layout_height="@dimen/main_layout_button_height"
                         android:text="@string/report_button_name" android:id="@+id/btn_reports"
-                        android:layout_gravity="center" android:layout_column="1"/>
+                        android:layout_gravity="center" android:layout_column="1" android:layout_weight="1"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>

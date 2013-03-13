@@ -22,6 +22,14 @@
     <!-- budget activity names -->
     <string name="add_budget_button_name">Add budget</string>
 
+    <!-- add budget names -->
+    <string name="budget_name_label">Name</string>
+    <string name="budget_value_label">Value</string>
+    <string name="budget_account_label">Default account</string>
+    <string name="budget_comment_label">Comment</string>
+    <string name="budget_save_button">Save</string>
+    <string name="budget_create_button">Create</string>
+
     <!-- DB constants-->
     <string name="db_name">moneylog.db</string>
 
