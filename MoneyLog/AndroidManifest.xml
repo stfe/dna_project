@@ -20,9 +20,10 @@
         </activity>
         <activity android:name=".activities.BudgetListActivity"/>
         <activity android:name=".activities.AddBudgetActivity"/>
+        <activity android:name=".activities.AccountListActivity"/>
 
         <provider
-                android:name=".sqlproviders.BudgetContentProvider"
+                android:name=".sqlproviders.MoneyLogContentProvider"
                 android:authorities="ru.sf.finances.moneylog.contentprovider" >
         </provider>
     </application>

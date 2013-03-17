@@ -19,13 +19,24 @@ public class MainActivity extends Activity {
 
 
     /**
-     * Budget button click listener
+     * Budget list button click listener
      *
      * @param view
      */
-    public void budgetButtonListener(View view) {
+    public void budgetListButtonListener(View view) {
         Intent intent = new Intent();
         intent.setClass(this, BudgetListActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Account list button click listener
+     *
+     * @param view
+     */
+    public void accountListButtonListener(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, AccountListActivity.class);
         startActivity(intent);
     }
 }

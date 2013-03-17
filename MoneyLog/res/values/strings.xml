@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- application name-->
     <string name="app_name">MoneyLog</string>
 
@@ -30,8 +29,12 @@
     <string name="budget_save_button">Save</string>
     <string name="budget_create_button">Create</string>
 
+    <!-- account activity names-->
+    <string name="accaunt_balance">Balance:</string>
+    <string name="account_limit">Limit:</string>
+    <string name="add_account_button_name">Add account</string>
+
     <!-- DB constants-->
     <string name="db_name">moneylog.db</string>
-
 
 </resources>

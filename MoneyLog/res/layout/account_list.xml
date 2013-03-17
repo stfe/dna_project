@@ -3,17 +3,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent" android:longClickable="true">
 
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_budget_button_name"
-            android:id="@+id/btn_add_budget" android:layout_gravity="center"
-            android:onClick="addBudgetButtonListener"/>
+            android:text="@string/add_account_button_name"
+            android:id="@+id/button"/>
 
-    <fragment android:name="ru.sf.finances.moneylog.activities.BudgetListFragment"
+    <fragment android:name="ru.sf.finances.moneylog.activities.AccountListFragment"
               android:layout_weight="1"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent"/>
+              android:layout_height="fill_parent" />
+
 </LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/account_name"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accaunt_balance"
+                android:id="@+id/account_balance_label" android:layout_gravity="left" android:textSize="12sp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/account_balance_value" android:layout_weight="1" android:textSize="12sp"
+                android:text="100.24" android:textColor="#00ff00"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_limit"
+                android:id="@+id/account_limit_label" android:layout_weight="0" android:textSize="12sp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/account_limit_value" android:layout_weight="1" android:textSize="12sp"
+                android:textColor="#00ff00"/>
+    </LinearLayout>
+</LinearLayout>

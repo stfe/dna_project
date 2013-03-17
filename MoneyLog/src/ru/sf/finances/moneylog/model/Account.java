@@ -11,9 +11,9 @@ public class Account {
 
     private String name;
 
-    private String comments;
+    private String comment;
 
-    private BigDecimal balance;
+    private BigDecimal limit;
 
     public long getId() {
         return id;
@@ -31,19 +31,19 @@ public class Account {
         this.name = name;
     }
 
-    public String getComments() {
-        return comments;
+    public String getComment() {
+        return comment;
     }
 
-    public void setComments(String comments) {
-        this.comments = comments;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
-    public BigDecimal getBalance() {
-        return balance;
+    public BigDecimal getLimit() {
+        return limit;
     }
 
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
+    public void setLimit(BigDecimal limit) {
+        this.limit = limit;
     }
 }

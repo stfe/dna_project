@@ -17,6 +17,10 @@ public class BudgetTable {
     public static final String COLUMN_ACCOUNT = "account";
     public static final String COLUMN_COMMENT = "comment";
 
+    public static String[] AVAILABLE = {BudgetTable.COLUMN_ACCOUNT,
+            BudgetTable.COLUMN_BALANCE, BudgetTable.COLUMN_COMMENT,
+            BudgetTable.COLUMN_ID, BudgetTable.COLUMN_NAME, BudgetTable.COLUMN_VALUE};
+
     // Database creation SQL statement
     private static final String DATABASE_CREATE = "create table "
             + TABLE_BUDGET
@@ -31,11 +35,11 @@ public class BudgetTable {
 
     public static void onCreate(SQLiteDatabase database) {
         database.execSQL(DATABASE_CREATE);
-        database.execSQL("insert into " + TABLE_BUDGET + "(" + COLUMN_ID + ", " + COLUMN_NAME+ ", " + COLUMN_VALUE+ ", " + COLUMN_BALANCE+ ", " + COLUMN_ACCOUNT+ ", " + COLUMN_COMMENT + ") " +
+        database.execSQL("insert into " + TABLE_BUDGET + "(" + COLUMN_ID + ", " + COLUMN_NAME + ", " + COLUMN_VALUE + ", " + COLUMN_BALANCE + ", " + COLUMN_ACCOUNT + ", " + COLUMN_COMMENT + ") " +
                 "values (1, 'Budget_1', '123.123', '43.34', '14', 'Super puper budget...');");
-        database.execSQL("insert into " + TABLE_BUDGET + "(" + COLUMN_ID + ", " + COLUMN_NAME+ ", " + COLUMN_VALUE+ ", " + COLUMN_BALANCE+ ", " + COLUMN_ACCOUNT+ ", " + COLUMN_COMMENT + ") " +
+        database.execSQL("insert into " + TABLE_BUDGET + "(" + COLUMN_ID + ", " + COLUMN_NAME + ", " + COLUMN_VALUE + ", " + COLUMN_BALANCE + ", " + COLUMN_ACCOUNT + ", " + COLUMN_COMMENT + ") " +
                 "values (2, 'Budget_2', '123.123', '43.34', '14', 'Super puper budget...');");
-        database.execSQL("insert into " + TABLE_BUDGET + "(" + COLUMN_ID + ", " + COLUMN_NAME+ ", " + COLUMN_VALUE+ ", " + COLUMN_BALANCE+ ", " + COLUMN_ACCOUNT+ ", " + COLUMN_COMMENT + ") " +
+        database.execSQL("insert into " + TABLE_BUDGET + "(" + COLUMN_ID + ", " + COLUMN_NAME + ", " + COLUMN_VALUE + ", " + COLUMN_BALANCE + ", " + COLUMN_ACCOUNT + ", " + COLUMN_COMMENT + ") " +
                 "values (3, 'Budget_3', '123.123', '43.34', '14', 'Super puper budget...');");
     }
 
