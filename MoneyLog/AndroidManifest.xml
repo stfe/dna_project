@@ -5,7 +5,13 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="10"
               android:targetSdkVersion="16"/>
-    <application android:label="@string/app_name">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application android:label="@string/app_name" android:debuggable="true">
         <activity android:name=".activities.AuthActivity"
                   android:label="@string/app_name">
             <intent-filter>
@@ -21,10 +27,11 @@
         <activity android:name=".activities.BudgetListActivity"/>
         <activity android:name=".activities.AddBudgetActivity"/>
         <activity android:name=".activities.AccountListActivity"/>
+        <activity android:name=".activities.AddTransaction"/>
 
         <provider
                 android:name=".sqlproviders.MoneyLogContentProvider"
-                android:authorities="ru.sf.finances.moneylog.contentprovider" >
+                android:authorities="ru.sf.finances.moneylog.contentprovider">
         </provider>
     </application>
 </manifest> 

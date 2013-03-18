@@ -1,5 +1,6 @@
 package ru.sf.finances.moneylog.activities;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import ru.sf.finances.moneylog.R;
@@ -71,5 +73,14 @@ public class AccountListFragment extends Fragment implements LoaderManager.Loade
 
         ListView listView = (ListView) getView().findViewById(R.id.lst_account);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), AddTransaction.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_vertical">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/editText" android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_btn_galery" android:src="@drawable/device_access_camera"
+                android:onClick="choosePhotoListener"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_btn_camera" android:src="@drawable/device_access_camera"
+                android:longClickable="false" android:onClick="makePhotoListener"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_btn_custom_camera" android:layout_gravity="center"
+                android:src="@drawable/device_access_camera" android:onClick="makeCustomPhotoListener"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+        <SurfaceView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:id="@+id/surfaceView"/>
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/img_photo" android:focusableInTouchMode="false"/>
+    </LinearLayout>
+</LinearLayout>

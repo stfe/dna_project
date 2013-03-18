@@ -1,14 +1,14 @@
 package ru.sf.finances.moneylog.activities;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import ru.sf.finances.moneylog.R;
 
 
 /**
  * Account list activity
  */
-public class AccountListActivity extends Activity {
+public class AccountListActivity extends FragmentActivity {
 
 
     @Override
